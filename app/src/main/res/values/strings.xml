@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Xgditor</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="additeamongt">添加新项目</string>
+    <string name="itemlist">Addons列表</string>
+    <string name="addaddontitle">新建Addon</string>
+    <string name="addaddonname">名称</string>
+    <string name="addaddondescription">介绍</string>
+    <string name="addondeveloper">作者</string>
+    <string name="UUID">UUID标识符</string>
+    <string name="autouuid">自动生成</string>
+    <string name="addonversion">Addon版本</string>
+    <string name="minecraftversion">游戏版本</string>
+    <string name="moudlestext">依赖模块</string>
+    <string name="javascriptentry">脚本入口</string>
+    <string name="bdsOr">提示：此Addon仅在服务端上运行</string>
+    <string name="yes">确定</string>
+    <string name="cancel">取消</string>
+    <string name="minecraftmodule">mojang-minecraft</string>
+    <string name="gametestmodule">mojang-gametest</string>
+    <string name="uimodule">mojang-minecraft-ui</string>
+    <string name="netmodule">mojang-net</string>
+    <string name="servermodule">mojang-minecraft-server-admin</string>
+    <string name="editorcommonmodule">editor-common</string>
+    <string name="newaddon">新建</string>
+    <string name="edit">编辑</string>
+    <string name="consttext">常量</string>
+    <string name="var">变量</string>
+    <string name="code">代码</string>
+    <string name="list">列表</string>
+    <string name="app_widget_description">des</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="title_activity_addons_edit">addonsEditActivity</string>
+</resources>

@@ -1,14 +1,10 @@
 package com.zxgaer.xgditor
 
-import android.R
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.LinearLayout
-import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.ItemTouchHelper
-import androidx.recyclerview.widget.RecyclerView
 
 
 class addonEditActivity : AppCompatActivity() {

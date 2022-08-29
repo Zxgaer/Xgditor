@@ -25,8 +25,8 @@
     <string name="editorcommonmodule">editor-common</string>
     <string name="newaddon">新建</string>
     <string name="edit">编辑</string>
-    <string name="consttext">常量</string>
-    <string name="var">变量</string>
+    <string name="consttext">定义常量</string>
+    <string name="var">定义变量</string>
     <string name="code">代码</string>
     <string name="list">列表</string>
     <string name="app_widget_description">des</string>

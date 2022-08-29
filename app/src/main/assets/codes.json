@@ -1,5 +1,19 @@
 {
   "codes": [
-    "blockplaceevent"
+    {
+      "name": "navjs",
+      "displayName": "调用原生JS"
+    },
+    {
+      "name": "blockplaceevent",
+      "displayName": "方块放置事件"
+    },
+    {
+      "name": "blockbreakevent",
+      "displayName": "方块破坏事件"
+    },
+    {
+      "name": ""
+    }
   ]
 }

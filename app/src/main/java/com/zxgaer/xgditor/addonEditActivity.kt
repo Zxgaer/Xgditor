@@ -16,11 +16,12 @@ class addonEditActivity : AppCompatActivity() {
         toolbar?.title = intent.getStringExtra("addonName") + getString(R.string.edit)
     }
     fun add(v:View) {
-        //var ina = Intent()
-        //ina.setClass(this,codeBlocksListActivity::class.java)
-        //startActivityForResult(ina,1)
-        var codea = findViewById<View>(R.id.code_area) as LinearLayout
-        var ith = LinearLayout.inflate(this, R.layout.const_code_block, null)
+        var ina = Intent()
+        ina.setClass(this,codeBlocksListActivity::class.java)
+        startActivityForResult(ina,1)
+        //var codea = findViewById<View>(R.id.code_area) as LinearLayout
+        //var ith = LinearLayout.inflate(this, R.layout.const_code_block, null)
+        //codea.addView(ith)
     }
 
 

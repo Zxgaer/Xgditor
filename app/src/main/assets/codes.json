@@ -1,19 +1,11 @@
 {
-  "codes": [
-    {
-      "name": "navjs",
-      "displayName": "调用原生JS"
-    },
-    {
-      "name": "blockplaceevent",
-      "displayName": "方块放置事件"
-    },
-    {
-      "name": "blockbreakevent",
-      "displayName": "方块破坏事件"
-    },
-    {
-      "name": ""
-    }
-  ]
+    "codes": [
+        {
+            "name": "navjs",
+            "type": "method",
+            "blocks": [{"name":"text1","block_type": "text","text": "调用一行原生JS"},
+                       {"name":"input1","block_type": "input"}],
+            "output": "input1"
+        }
+    ]
 }

@@ -23,11 +23,6 @@
             android:name=".addonEditActivity"
             android:exported="false" />
         <activity
-            android:name=".addonsEditActivity"
-            android:exported="false"
-            android:label="@string/title_activity_addons_edit"
-            android:theme="@style/Theme.Xgditor.NoActionBar" />
-        <activity
             android:name=".addItemsActivity"
             android:exported="false" />
 

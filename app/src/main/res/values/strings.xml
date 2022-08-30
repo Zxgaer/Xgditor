@@ -29,6 +29,7 @@
     <string name="var">定义变量</string>
     <string name="code">代码</string>
     <string name="list">列表</string>
+    <string name="equ">赋值为</string>
     <string name="app_widget_description">des</string>
 
     <string name="menu_home">Home</string>

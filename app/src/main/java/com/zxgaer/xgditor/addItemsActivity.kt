@@ -90,12 +90,12 @@ class addItemsActivity : AppCompatActivity() {
                 if(inputText.isNotEmpty()) {
                     var addonlist = JSONObject(inputText)
                     addonlist.put(addonNameText, JSONArray().put(addonDescriptionText).put(addonVersionText))
-                    y2.writeText(addonlist.toString() + ",\n")
+                    y2.writeText(addonlist.toString(4) + ",\n")
                 }
                 else {
                     var addonlist = JSONObject()
                     addonlist.put(addonNameText, JSONArray().put(addonDescriptionText).put(addonVersionText))
-                    y2.writeText(addonlist.toString() + ",\n")
+                    y2.writeText(addonlist.toString(4) + ",\n")
                 }
                 var ina = Intent()
                 ina.setClass(this,addonEditActivity::class.java).putExtra("addonName",addonNameText)

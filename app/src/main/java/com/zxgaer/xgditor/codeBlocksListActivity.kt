@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
 import org.json.JSONArray
@@ -27,9 +28,11 @@ class codeBlocksListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_code_blocks_list)
         supportActionBar?.title = getString(R.string.code) + getString(R.string.list)
+
+
         val codeBlocksJson = JSONObject(openFile("codes.json")).getJSONArray("codes")
-        var k = constInit(this).METHOD_CODE_BLOCK_VIEW
-        var l = findViewById<View>(R.id.codeList) as LinearLayout
+        var CONSTV = constInit(this).METHOD_CODE_BLOCK_VIEW
+        val CODELIST = findViewById<View>(R.id.codeList) as LinearLayout
         for(index in 0 until codeBlocksJson.length()) {
             var block = codeBlocksJson.getJSONObject(index)
             var blockVar = block.getJSONArray("blocks")
@@ -39,13 +42,25 @@ class codeBlocksListActivity : AppCompatActivity() {
                         var text = TextView(this)
                         text.text = blockVar.getJSONObject(index2).getString("text")
                         text.textSize = 24.0F
-                        text
+                        CONSTV.findViewById<LinearLayout>(R.id.methodll).addView(text)
                     }
-                    k.findViewById<TextView>(R.id.methodName).text = block.getJSONArray("blocks").getJSONObject(index2).getString("text")
-                    l.addView(k)
+                    else if(blockVar.getJSONObject(index2).getString("block_type") == "input") {
+                        var text = EditText(this)
+                        CONSTV.findViewById<LinearLayout>(R.id.methodll).addView(text)
+                    }
+                    else if(blockVar.getJSONObject(index2).getString("block_type") == "input2") {
+                        var text = EditText(this)
+                        text.maxLines = 10
+                        CONSTV.findViewById<LinearLayout>(R.id.methodll).addView(text)
+                    }
                 }
+                CODELIST.addView(CONSTV)
+                CONSTV = constInit(this).METHOD_CODE_BLOCK_VIEW
             }
         }
+
+
+
     }
     fun button1146514(v: View) {
         val inte = Intent().putExtra("dta","dat")

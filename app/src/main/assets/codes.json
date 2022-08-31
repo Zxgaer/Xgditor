@@ -3,8 +3,51 @@
         {
             "name": "navjs",
             "type": "method",
-            "blocks": [{"name":"text1","block_type": "text","text": "调用一行原生JS"},
-                       {"name":"input1","block_type": "input"}],
+            "blocks": [
+                {
+                    "name":"text1",
+                    "block_type": "text",
+                    "text": "调用一行原生JS"
+                },
+                {
+                    "name":"input1",
+                    "block_type": "input"
+                }
+            ],
+            "output": "input1"
+        },
+        {
+            "name": "navmorejs",
+            "type": "method",
+            "blocks": [
+                {
+                    "name":"text1",
+                    "block_type": "text",
+                    "text": "调用多行原生JS"
+                },
+                {
+                    "name":"input1",
+                    "block_type": "input2"
+                }
+            ],
+            "display": [["text1","input1"]],
+            "output": "input1"
+        },
+        {
+            "name": "blockplaceevent",
+            "type": "method",
+            "blocks": [
+                {
+                    "name":"text1",
+                    "block_type": "text",
+                    "text": "监听方块放置事件"
+                },
+                {
+                    "name": "text2",
+                    "block_type": "text",
+                    "text": "执行"
+                }
+            ],
             "output": "input1"
         }
     ]

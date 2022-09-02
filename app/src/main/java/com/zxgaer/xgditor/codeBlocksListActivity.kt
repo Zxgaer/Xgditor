@@ -58,13 +58,5 @@ class codeBlocksListActivity : AppCompatActivity() {
                 CONSTV = constInit(this).METHOD_CODE_BLOCK_VIEW
             }
         }
-
-
-
-    }
-    fun button1146514(v: View) {
-        val inte = Intent().putExtra("dta","dat")
-        setResult(RESULT_OK,inte)
-        finish()
     }
 }

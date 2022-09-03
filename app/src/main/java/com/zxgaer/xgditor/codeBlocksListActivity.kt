@@ -17,7 +17,7 @@ import com.zxgaer.xgditor.constInit
 
 class codeBlocksListActivity : AppCompatActivity() {
     private fun openFile(filename:String): String {
-        var isn = BufferedReader(InputStreamReader(assets.open(filename))).useLines { lines ->
+        var isn = BufferedReader(InputStreamReader(this.assets.open(filename))).useLines { lines ->
             val results = StringBuilder()
             lines.forEach { results.append(it) }
             results.toString()
@@ -31,32 +31,17 @@ class codeBlocksListActivity : AppCompatActivity() {
 
 
         val codeBlocksJson = JSONObject(openFile("codes.json")).getJSONArray("codes")
-        var CONSTV = constInit(this).METHOD_CODE_BLOCK_VIEW
         val CODELIST = findViewById<View>(R.id.codeList) as LinearLayout
         for(index in 0 until codeBlocksJson.length()) {
             var block = codeBlocksJson.getJSONObject(index)
             var blockVar = block.getJSONArray("blocks")
-            if(block.getString("type") == "method") {
-                for(index2 in 0 until block.getJSONArray("blocks").length()) {
-                    if(blockVar.getJSONObject(index2).getString("block_type") == "text") {
-                        var text = TextView(this)
-                        text.text = blockVar.getJSONObject(index2).getString("text")
-                        text.textSize = 24.0F
-                        CONSTV.findViewById<LinearLayout>(R.id.methodll).addView(text)
-                    }
-                    else if(blockVar.getJSONObject(index2).getString("block_type") == "input") {
-                        var text = EditText(this)
-                        CONSTV.findViewById<LinearLayout>(R.id.methodll).addView(text)
-                    }
-                    else if(blockVar.getJSONObject(index2).getString("block_type") == "input2") {
-                        var text = EditText(this)
-                        text.maxLines = 10
-                        CONSTV.findViewById<LinearLayout>(R.id.methodll).addView(text)
-                    }
-                }
-                CODELIST.addView(CONSTV)
-                CONSTV = constInit(this).METHOD_CODE_BLOCK_VIEW
+            var methodView = generateView().main(this,block)
+            methodView.setOnClickListener {
+                var ina = Intent().putExtra("block",index)
+                setResult(RESULT_OK,ina)
+                finish()
             }
+            CODELIST.addView(methodView)
         }
     }
 }

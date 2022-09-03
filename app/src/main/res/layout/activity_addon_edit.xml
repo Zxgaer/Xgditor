@@ -21,7 +21,8 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/code_ar"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                app:layoutManager="LinearLayoutManager" />
 
             <LinearLayout
                 android:id="@+id/code_area"
@@ -29,6 +30,11 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
+                <TextView
+                    android:id="@+id/textView114"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout

@@ -28,8 +28,8 @@ class codeAdapter(val codeList: List<JSONObject>,context: Context,jsonObject: JS
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): codeViewHolder {
-        val vie = generateView().main(contextI,jsonObject)
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.method_code_block,parent,false)
+        val vie = generateView().main(parent.context,jsonObject)
+        val view = LayoutInflater.from(contextI).inflate(R.layout.method_code_block,parent,false)
         view.findViewById<LinearLayout>(R.id.methodll).addView(vie)
         return codeViewHolder(view)
     }

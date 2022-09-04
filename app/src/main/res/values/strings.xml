@@ -36,4 +36,6 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="title_activity_addons_edit">addonsEditActivity</string>
+    <string name="title_activity_t">t</string>
+    <string name="title_activity_edit_compose">edit_compose_activity</string>
 </resources>
